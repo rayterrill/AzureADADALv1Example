@@ -1,6 +1,8 @@
 # AzureAD ADAL JS Example
 
-This repo contains a super-basic client-side HTML/JS application (pulled from https://github.com/Azure-Samples/active-directory-javascript-singlepageapp-dotnet-webapi) using the AzureAD v1.0 endpoint.
+This repo contains a super-basic client-side HTML/JS application using the AzureAD v1.0 endpoint.
+
+This was started from the https://github.com/Azure-Samples/active-directory-javascript-singlepageapp-dotnet-webapi repo, but was greatly simplified to show how to use the ADAL library on a basic, non-SPA application, as well as initiate the login flow immediately on page load vs at the push of a button.
 
 ### To Use:
 1. Clone the repo
@@ -13,5 +15,5 @@ This repo contains a super-basic client-side HTML/JS application (pulled from ht
   * Make sure the Type is "Web", and enter the web location for your web application (or http://localhost/ for testing). Make sure your Redirect URI has a trailing slash.
   * Scroll down, and check the ID tokens page checkbox under Implicit grant, and click Save.
   * Navigate back to the Overview page, and copy the "Application (client) ID".
-  * Open the js/app.js file in the clone directory, and populate the tenant name (YOURDOMAIN.onmicrosoft.com), as well as the clientId you copied above. Save the file.
-  * Run the code. Clicking the Login link in the upper right should allow you to sign in.
+3. Open the js/app.js file in the clone directory, and populate the tenant name (YOURDOMAIN.onmicrosoft.com), as well as the clientId you copied above. Save the file.
+4. Run the code. If you're already logged in, you should go straight to the homepage. If not, you'll be immediately redirected into the login workflow.
